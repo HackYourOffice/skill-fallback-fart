@@ -28,8 +28,6 @@ class MeaningFallback(FallbackSkill):
         mixer.init()
         mixer.music.load(fart)
         mixer.music.play()
-        player = vlc.MediaPlayer(fart)
-        player.play()
 
     def shutdown(self):
         """
