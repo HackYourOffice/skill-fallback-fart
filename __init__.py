@@ -21,8 +21,8 @@ class MeaningFallback(FallbackSkill):
 
     def handle_fallback(self, message):
         print("fart")
-        api_url = "http://furby-control.synyx.coffee:3872/cmd/action"
-        requests.post(api_url, data='{"params":{"input":7,"index":2,"subindex":0,"specific":0}}')
+        #api_url = "http://furby-control.synyx.coffee:3872/cmd/action"
+        #requests.post(api_url, data='{"params":{"input":7,"index":2,"subindex":0,"specific":0}}')
         time.sleep(1)
         player = vlc.MediaPlayer("https://www.soundjay.com/human/fart-0%d.mp3" % (random.randint(1, 8)))
         player.play()
