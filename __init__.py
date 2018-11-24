@@ -1,6 +1,6 @@
 from mycroft.skills.core import FallbackSkill
 import requests
-import vlc
+from pygame import mixer
 import random
 import time
 
@@ -25,6 +25,9 @@ class MeaningFallback(FallbackSkill):
         #requests.post(api_url, data='{"params":{"input":7,"index":2,"subindex":0,"specific":0}}')
         time.sleep(1)
         fart = "./fart-0%d.mp3" % (random.randint(1, 8))
+        mixer.init()
+        mixer.music.load(fart)
+        mixer.music.play()
         player = vlc.MediaPlayer(fart)
         player.play()
 
