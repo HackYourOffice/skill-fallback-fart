@@ -19,7 +19,7 @@ class MeaningFallback(FallbackSkill):
     def handle_fallback(self, message):
         print("fart")
         api_url = "http://furby-control.synyx.coffee:3872/cmd/action"
-        requests.post(api_url, data='{"params":{"input":7,"index":2,"subindex":0,"specific:0}}')
+        requests.post(api_url, data='{"params":{"input":7,"index":2,"subindex":0,"specific":0}}')
 
     def shutdown(self):
         """
